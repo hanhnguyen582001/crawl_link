@@ -1,0 +1,9 @@
+<%= form_with url:search_path do |f| %>
+  <%= f.label :web_link, 'Tìm kiếm chính xác' %>
+  <%= f.text_field :web_link, placeholder: 'Nhập trang web bạn muốn tìm kiếm' %>
+  <%= f.submit 'Tìm kiếm' %>
+<% end %>
+<p>Rank: <%= @rank %></p>
+<% @arr.each do |link|%>
+  <p><%= link_to link[:link], link[:link] %></p>
+<% end %>
